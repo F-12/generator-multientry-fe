@@ -11,24 +11,14 @@ let fs = require('fs');
 module.exports = yeoman.Base.extend({
   configuring() {
     this.log('configuring');
-    if (!this.config.get('srcDirPath')) {
-      this.config.set('srcDirPath', 'src');
-    }
-    if (!this.config.get('entryDir')) {
-      this.config.set('entryDir', 'entry');
-    }
-    if (!this.config.get('pageDirPath')) {
-      this.config.set('pageDirPath', 'page');
-    }
-    if (!this.config.get('webpack.entry.suffix')) {
-      this.config.set('webpack.entry.suffix', '-entry');
-    }
-    if (!this.config.get('webpack.bundle.suffix')) {
-      this.config.set('webpack.bundle.suffix', 'pack');
-    }
-    if (!this.config.get('webpack.bundle.distDir')) {
-      this.config.set('webpack.bundle.distDir', 'build');
-    }
+    this.config.defaults({
+      'srcDirPath': 'src',
+      'entryDir': 'entry',
+      'pageDirPath': 'page',
+      'webpack.entry.suffix': '-entry',
+      'webpack.bundle.suffix': '.pack',
+      'webpack.bundle.distDir': 'build'
+    });
   },
   prompting: function () {
     // Have Yeoman greet the user.
