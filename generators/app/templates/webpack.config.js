@@ -18,7 +18,7 @@ module.exports = {
   output: {
     path: __dirname + '/<%=distDir%>',
     publicPath: '/<%=distDir%>',
-    filename: '[name].<%=bundleSuffix%>.js'
+    filename: '[name]<%=bundleSuffix%>.js'
   },
   module: {
     loaders: [

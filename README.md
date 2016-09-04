@@ -3,25 +3,37 @@
 
 ## Installation
 
-First, install [Yeoman](http://yeoman.io) and generator-multientry-fe using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
+First, install [Yeoman](http://yeoman.io)
 
 ```bash
 npm install -g yo
 npm install -g generator-multientry-fe
 ```
 
-Then generate your new project:
+Then, install generator-multientry-fe. You can choose the global installation way or locally installation way.
+
+## Usage
+
+Generate your new project:
 
 ```bash
+mkdir your-project-dir
+cd your-project-dir
 yo multientry-fe
 ```
 
-## Getting To Know Yeoman
+Now you have a front end project within which uses webpack to make bundle and vuejs to promote your web development effiency.
 
- * Yeoman has a heart of gold.
- * Yeoman is a person with feelings and opinions, but is very easy to work with.
- * Yeoman can be too opinionated at times but is easily convinced not to be.
- * Feel free to [learn more about Yeoman](http://yeoman.io/).
+If you want to start a new app in this project, just use yo command:
+
+```bash
+yo multientry-fe:page feature-name new-page-name
+```
+This will generate a html file and related webpack entry js file according to your configuration in .yo-rc.json file for you.
+
+## TODO
+
+- [ ] support for new vue component npm package development and publish
 
 ## License
 
